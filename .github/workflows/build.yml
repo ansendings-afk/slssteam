@@ -2,8 +2,10 @@ name: build
 
 on:
   schedule:
-    # Every 6 hours. Upstream cuts releases irregularly, so this is a poll.
-    - cron: '17 */6 * * *'
+    # Upstream cuts a release every few months, so a daily poll is plenty.
+    # GitHub skips scheduled runs when Activity is idle for 60 days unless the
+    # repo has recent commits; the bot's own commits keep it alive.
+    - cron: '17 4 * * *'
   workflow_dispatch:
 
 permissions:
