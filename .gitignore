@@ -1,0 +1,6 @@
+# makepkg build artifacts (the published package lives in docs/, not here)
+/src/
+/pkg/
+/upstream/
+/*.pkg.tar.zst
+/SLSsteam-Arch-release-*.pkg.tar.zst
